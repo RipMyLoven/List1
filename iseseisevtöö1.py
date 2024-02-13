@@ -29,17 +29,39 @@ for i in range(5):
 
 print("Loetelu oli: ", nimed)
 nimed.sort()
-print("Loetelu sorteeritud: ",nimed)
+print("Loetelu sorteeritud: ", nimed)
 for n in range(len(nimed)):
     print(n+1,".",nimed[n],sep=" ")
 
-print("Vimasena oli lisatud: ",nimi)
+print("Viimasena oli lisatud: ", nimed[-1])
+
+nimekogum = []
+for i in range(5):
+    nimi = input("Sisestage nimi: ").capitalize()
+    nimekogum.append(nimi)
+
+nimekogum.sort()
+print("Nimed tähestikulises järjekorras:", nimekogum)
+viimane_lisatud = nimekogum[-1]
+print("Viimati lisatud nimi:", viimane_lisatud)
 
 opilased = ['Juhan', 'Kati', 'Mario', 'Mario', 'Mati', 'Mati']
+unikaalsed_opilased = []
 
-nimed = []
 for nimi in opilased:
-    if nimi not in nimed:
-        nimed.append(nimi)
+    if nimi not in unikaalsed_opilased:
+        unikaalsed_opilased.append(nimi)
 
-print(nimed)
+print("Unikaalsed nimed:", unikaalsed_opilased)
+
+vanused = [25, 30, 35, 40, 45]
+min_vanus = min(vanused)
+max_vanus = max(vanused)
+summa = sum(vanused)
+keskmine = summa / len(vanused)
+
+print("Vähim vanus:", min_vanus)
+print("Suurim vanus:", max_vanus)
+print("Vanuste kogusumma:", summa)
+print("Vanuste keskmine:", keskmine)
+
