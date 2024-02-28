@@ -1,28 +1,60 @@
-#from Mymodul import * #Summa as s
+from Mymodul import *
+b=int(input("Sisesta arv2: "))
+summa_3=Summa(3,b,int(input("kolmas arv: ")))
+summa_31=Summa(100,100)
+print(summa_3)
+print(summa_31)
+2
+from Mymodul import *
+try:
+    aasta=float(input("Sisestage Aasta: "))
+    print(liigaasta(aasta))
+except ValueError:
+    pass
 
-#b=int(input("Sisesta arv2: "))
-#summa_3=Summa(3,b,int(input("Komas arv: ")))
-#summa_31=Summa(100,100)
+3
+from Mymodul import *
+try:
+    ruudukülg = int(input("Palun sisestage ruudu küljed: "))
+    if ruudukülg != ruudukülg:
+        print("Palun sisestage 3 küljet.")
+    else:
+        perimeeter, pindala, diagonaal = square(ruudukülg)
+        print(perimeeter, pindala, round(diagonaal, 2))
+except ValueError:
+    print("Palun sisestage kehtiv külje pikkus numbrina.")
 
-#print(summa_3)
-#print(summa_31)
+
+4
+from Mymodul import *
+while True:
+    try:
+        kuu=int(input("kuu number: "))
+        break
+    except:
+        print("viga")
+a=season(kuu)
+print(a)
+
+
+6
 
 from Mymodul import *
+arv=int(input("Sisestage arvu: "))
+print(is_prime(arv))
 
-tulemus = arithmetic(5, 2, '+')
-print("Liitmise tulemus:", tulemus)
 
-tulemus = arithmetic(5, 2, '-')
-print("Lahutamise tulemus:", tulemus)
+7
 
-tulemus = arithmetic(5, 2, '*')
-print("Korrutamise tulemus:", tulemus)
+from Mymodul import *
+paev=int(input("kirjutage paeva: "))
+kuu=int(input("kirjutage kuut: "))
+aasta=int(input("kirjutage aasta: "))
 
-tulemus = arithmetic(5, 2, '/')
-print("Jagamise tulemus:", tulemus)
+print(date(paev, kuu, aasta))
 
-tulemus = arithmetic(5, 0, '/')
-print("Nulliga jagamise tulemus:", tulemus)
+from Mymodul import *
+a=float(input("sisestage a raha: "))
+aasta=int(input("Sisestage kui palju aastaks: "))
 
-tulemus = arithmetic(5, 2, '%')
-print("Tundmatu tegevuse tulemus:", tulemus)
+print("teie tagastatud summa on: ",pank(a,aasta))
